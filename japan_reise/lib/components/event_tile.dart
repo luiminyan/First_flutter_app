@@ -7,7 +7,7 @@ class EventTile extends StatelessWidget {
   // path to string
   final String imagePath;
   final String rating;
-  // final void Function()? details;   //?: nullable
+  final void Function()? details;   //?: nullable
 
   // constructor
   const EventTile({
@@ -16,7 +16,7 @@ class EventTile extends StatelessWidget {
     required this.price,
     required this.imagePath,
     required this.rating,
-    // required this.details
+    required this.details
   });
 
   @override
@@ -31,9 +31,16 @@ class EventTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(imagePath),
+          // make the picture clickable
+          GestureDetector(
+              onTap: details,
+              child: Image.asset(
+                  imagePath,
+                  height: 120,
+              )
+          ),
           Text(
             name,
             style: TextStyle(
