@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:japan_reise/components/button.dart';
 import 'package:japan_reise/components/event_tile.dart';
 
-class MenuPage extends StatelessWidget {
+class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
+
+  @override
+  State<MenuPage> createState() => _MenuPageState();
+}
+
+class _MenuPageState extends State<MenuPage> {
+  // variable, isDarkMode
+  bool _isDarkmode = false;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +42,7 @@ class MenuPage extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 222, 210, 243),
+      backgroundColor: _isDarkmode ? Colors.black : Color.fromARGB(255, 222, 210, 243),
       appBar: AppBar(
         title: Text(
           "J A P A N",
@@ -48,7 +56,18 @@ class MenuPage extends StatelessWidget {
             Icons.menu,
             color: Colors.white,
         ),  //now: a placeholder
+        // set the stateful actions
         actions: [
+          IconButton(
+              // placeholder onPressed
+              onPressed: (){
+                // set setState()
+                setState(() {
+                  _isDarkmode = !_isDarkmode;
+                });
+              },
+              icon: _isDarkmode? Icon(Icons.light_mode, color: Colors.white) : Icon(Icons.dark_mode, color: Colors.black)
+          ),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Icon(
