@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 // import the StartPage
 import 'package:japan_reise/pages/start_page.dart';
 import 'package:japan_reise/pages/menu_page.dart';
+import 'package:japan_reise/pages/event_pages/festival.dart';
+
 
 void main() {
   // run the app(the app to run)
@@ -25,7 +27,8 @@ class MyApp extends StatelessWidget {
       // Navigation
       routes: {
         '/startpage':(context) => StartPage(),
-        '/menupage':(context) => MenuPage()
+        '/menupage':(context) => MenuPage(),
+        '/festivalpage':(context) => FestivalPage()
       },
     );
   }

@@ -23,7 +23,8 @@ class _MenuPageState extends State<MenuPage> {
         price: '49 Euro',
         imagePath: 'lib/images/japan7.png',
         rating: "5",
-        details: () {  },
+        // when the pic is clicked, navigate to the event page
+        details: () => Navigator.pushNamed(context, '/festivalpage'),
       ),
       EventTile(
         name: "Noodle Haromy Japan",
@@ -102,7 +103,10 @@ class _MenuPageState extends State<MenuPage> {
                         ),
                     ),
                     SizedBox(height: 15),
-                    MyButton(myText: "Buchen", event: (){})
+                    MyButton(
+                        myText: "Buchen",
+                        event: (){}
+                    )
                   ],
                 ),
                 // SizedBox(width: 25),
