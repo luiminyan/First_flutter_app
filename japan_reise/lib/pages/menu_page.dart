@@ -122,11 +122,11 @@ class MenuPage extends StatelessWidget {
             height: 5
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
               "Events",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.white
               ),
@@ -142,12 +142,61 @@ class MenuPage extends StatelessWidget {
                 itemCount: EventList.length,
                 scrollDirection: Axis.horizontal,
             ),
-          )
-
-
+          ),
+          SizedBox(height: 5),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              "Derzeit beliebt",
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 25),
+            padding: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              color: Colors.lightBlueAccent,
+              borderRadius: BorderRadius.circular(20)
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Image.asset(
+                    'lib/images/japan2.png',
+                    height: 85
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Kimono Kultur",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white
+                      )
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      "10 Euro",
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white
+                      )
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: 10)
         ],
       ),
-
     );
   }
 }
