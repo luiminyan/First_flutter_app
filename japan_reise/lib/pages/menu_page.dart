@@ -31,14 +31,14 @@ class _MenuPageState extends State<MenuPage> {
         price: '19 Euro',
         imagePath: 'lib/images/japan3.png',
         rating: "4",
-        details: () {  },
+        details: () => Navigator.pushNamed(context, '/noodlepage'),
       ),
       EventTile(
         name: "Mount Fuji Tour",
         price: '39 Euro',
         imagePath: 'lib/images/japan6.png',
         rating: "4.7",
-        details: () {  },
+        details: () => Navigator.pushNamed(context, '/fujitourpage'),
       )
     ];
 
@@ -47,7 +47,10 @@ class _MenuPageState extends State<MenuPage> {
       appBar: AppBar(
         title: Text(
           "J A P A N",
-          style: TextStyle(color: Colors.white)
+          style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold
+          )
         ),
         centerTitle: true,
         // also set the color in appBar
@@ -105,7 +108,7 @@ class _MenuPageState extends State<MenuPage> {
                     SizedBox(height: 15),
                     MyButton(
                         myText: "Buchen",
-                        event: (){}
+                        event: () => Navigator.pushNamed(context, '/fujitourpage')
                     )
                   ],
                 ),
@@ -118,7 +121,7 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
           SizedBox(
-            height: 10
+            height: 15
           ),
           // the search box
           Padding(
@@ -142,7 +145,7 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
           SizedBox(
-            height: 5
+            height: 15
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 25.0),
@@ -166,7 +169,7 @@ class _MenuPageState extends State<MenuPage> {
                 scrollDirection: Axis.horizontal,
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 30),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
@@ -178,6 +181,7 @@ class _MenuPageState extends State<MenuPage> {
               ),
             ),
           ),
+          SizedBox(height: 10),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 25),
             padding: EdgeInsets.all(5),

@@ -29,6 +29,7 @@ class EventTile extends StatelessWidget {
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 61, 91, 212),
         borderRadius: BorderRadius.circular(20),
+
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,7 +39,7 @@ class EventTile extends StatelessWidget {
               onTap: details,
               child: Image.asset(
                   imagePath,
-                  height: 120,
+                  height: 200,
               )
           ),
           Text(
