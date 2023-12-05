@@ -59,7 +59,7 @@ class _MenuPageState extends State<MenuPage> {
         leading: Icon(
             Icons.menu,
             color: Colors.white,
-        ),  //now: a placeholder
+        ),
         // set the stateful actions
         actions: [
           IconButton(
@@ -186,7 +186,7 @@ class _MenuPageState extends State<MenuPage> {
             margin: EdgeInsets.symmetric(horizontal: 25),
             padding: EdgeInsets.all(5),
             decoration: BoxDecoration(
-              color: Colors.lightBlueAccent,
+              color: Color.fromARGB(255, 61, 91, 212),
               borderRadius: BorderRadius.circular(20)
             ),
             child: Row(
