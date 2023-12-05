@@ -192,9 +192,13 @@ class _MenuPageState extends State<MenuPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Image.asset(
-                    'lib/images/japan2.png',
-                    height: 85
+                // make the picture clickable
+                GestureDetector(
+                  onTap: () => Navigator.pushNamed(context, '/kimonopage'),
+                  child: Image.asset(
+                      'lib/images/japan2.png',
+                      height: 100
+                  ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

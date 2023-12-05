@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:japan_reise/pages/cart.dart';
 import 'package:japan_reise/pages/event_pages/fuji_tour.dart';
 import 'package:japan_reise/pages/event_pages/kimono.dart';
 import 'package:japan_reise/pages/event_pages/noodle.dart';
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         '/festivalpage':(context) => FestivalPage(),
         '/fujitourpage':(context) => FujiTourPage(),
         '/noodlepage': (context) => NoodlePage(),
-        '/kimonopage': (context) => KimonoPage()
+        '/kimonopage': (context) => KimonoPage(),
+        '/cartpage': (context) => CartPage()
 
       },
     );
