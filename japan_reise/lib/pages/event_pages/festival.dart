@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:japan_reise/components/button.dart';
 
 
 class FestivalPage extends StatelessWidget {
@@ -86,62 +87,73 @@ class FestivalPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
-            Container(
-              padding: EdgeInsets.all(25),
-              height: 150,
-              color: Colors.blue,
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        "49 Euro",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
-                        )
-                      ),
-                      SizedBox(width: 15),
-                      Row(
-                        children: [
-                          // draw the - and + buttons
-                          Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white
-                            ),
-                            child: IconButton(
-                              onPressed: () {  },
-                              icon: Icon(Icons.remove),
-                            ),
-                          ),
-                          SizedBox(width: 15),
-                          Text(
-                            // use attr., change to string format
-                            booking_count.toString(),
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white
-                            ),
-                          ),
-                          SizedBox(width: 15),
-                          Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white
-                            ),
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.add)
-                            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(25),
+                color: Color.fromARGB(255, 61, 91, 212),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "49 Euro",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
                           )
-                        ],
-                      )
-                    ],
-                  )
-                ],
+                        ),
+                        SizedBox(width: 15),
+                        Row(
+                          children: [
+                            // draw the - and + buttons
+                            Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.white
+                              ),
+                              child: IconButton(
+                                // func. to REDUCE item number
+                                onPressed: (){
+                                },
+                                icon: Icon(Icons.remove),
+                              ),
+                            ),
+                            SizedBox(width: 15),
+                            Text(
+                              // use attr., change to string format
+                              booking_count.toString(),
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white
+                              ),
+                            ),
+                            SizedBox(width: 15),
+                            Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.white
+                              ),
+                              child: IconButton(
+                                // func. to INCREASE item number
+                              onPressed: () {
+              
+                              },
+                                icon: Icon(Icons.add)
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 14),
+                    MyButton(
+                        myText: "Zum Einkaufswagen",
+                        event: () => Navigator.pushNamed(context, '/cartpage')
+                    )
+                  ],
+                ),
               ),
             )
           ],
