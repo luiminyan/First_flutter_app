@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// observer pattern ???
 class CartModel extends ChangeNotifier{
   int noodlesoup = 0;
   int festival = 0;
@@ -47,4 +48,7 @@ class CartModel extends ChangeNotifier{
     notifyListeners();
   }
 
+  void main() {
+
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:japan_reise/models/cart_model.dart';
 import 'package:japan_reise/pages/cart.dart';
 import 'package:japan_reise/pages/event_pages/fuji_tour.dart';
 import 'package:japan_reise/pages/event_pages/kimono.dart';
@@ -7,11 +8,17 @@ import 'package:japan_reise/pages/event_pages/noodle.dart';
 import 'package:japan_reise/pages/start_page.dart';
 import 'package:japan_reise/pages/menu_page.dart';
 import 'package:japan_reise/pages/event_pages/festival.dart';
+// import provider,
+import 'package:provider/provider.dart';
 
 
 void main() {
   // run the app(the app to run)
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (context) => CartModel(),
+      child: const MyApp()
+    )
+  );
 }
 
 // define MyApp(), extend StatelessWidget class
@@ -37,7 +44,6 @@ class MyApp extends StatelessWidget {
         '/noodlepage': (context) => NoodlePage(),
         '/kimonopage': (context) => KimonoPage(),
         '/cartpage': (context) => CartPage()
-
       },
     );
   }
