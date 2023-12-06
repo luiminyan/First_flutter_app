@@ -8,21 +8,11 @@ Landing Page <br>
 <image src="images/mainPage_shot.png" height="375" alt="landingpage"/> <br>
 
 Menu page <br>
-<image src="https://github.com/luiminyan/First_flutter_app/blob/main/images/menuPage_sreenshot.png" height="375" alt="menupage"> <br>
+<image src="https://github.com/luiminyan/First_flutter_app/blob/main/images/menuPage_sreenshot.png" height="400" alt="menupage"> <br>
 
-Dark moode <br>
+Dark mode <br>
 <image src="/images/darkmode.png" height="375" alt="darkmode"><br>
 
-Festival Page <br>
-<image src="/images/event_pages/Mitama_Festival.png" height="375"><br>
-
-Noodle Page <br>
-<image src="/images/event_pages/Noodle.png" height="375"><br>
-
-Fuji Tour Page <br>
-<image src="/images/event_pages/fuji_tour.png" height="375"><br>
-
-Kimono Page <br>
-<image src="/images/event_pages/kimono.png" height="375"><br>
-
-
+Festival Page | Noodle Page | Fuji Tour Page | Kimono Page
+--- | --- | --- | ---
+![Mitama Festival](/images/event_pages/Mitama_Festival.png) | ![Noodle](/images/event_pages/Noodle.png) | ![Fuji Tour](/images/event_pages/fuji_tour.png) | ![Kimono](/images/event_pages/kimono.png)
