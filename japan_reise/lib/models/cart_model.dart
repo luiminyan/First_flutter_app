@@ -5,6 +5,15 @@ class CartModel extends ChangeNotifier{
   int noodlesoup = 0;
   int festival = 0;
   int tour = 0;
+  int kimono = 0;
+
+  // price list for the events
+  Map<String, double> priceMap = {
+    "Festival": 49.0,
+    "Noodle": 19.0,
+    "Fuji": 39.0,
+    "Kimono": 19.0
+  };
 
   void addNoodleSuppe() {
     noodlesoup++;
@@ -48,7 +57,16 @@ class CartModel extends ChangeNotifier{
     notifyListeners();
   }
 
-  void main() {
-
+  void addKimono() {
+    kimono++;
+    notifyListeners();
   }
+
+  void removeKimono() {
+    if (kimono > 0) {
+      kimono--;
+    }
+    notifyListeners();
+  }
+
 }
