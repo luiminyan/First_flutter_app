@@ -24,7 +24,22 @@ class FestivalPage extends StatelessWidget {
           // also set the color in appBar
           backgroundColor: Colors.transparent,
           elevation: 1, //1 as transparent, 0 as original
-          actions: [],
+          actions: [
+            IconButton(
+            // placeholder onPressed
+              onPressed: (){
+                // TODO: set setState()
+              },
+              icon: Icon(Icons.dark_mode, color: Colors.black)
+          ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Icon(
+                Icons.shopping_cart,
+                color: Colors.white,
+              ),
+            )
+          ],
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
