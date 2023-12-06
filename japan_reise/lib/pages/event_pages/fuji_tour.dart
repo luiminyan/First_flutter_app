@@ -33,10 +33,13 @@ class FujiTourPage extends StatelessWidget {
                   icon: Icon(Icons.dark_mode, color: Colors.black)
               ),
               Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Icon(
-                  Icons.shopping_cart,
-                  color: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: IconButton(
+                  onPressed: () => Navigator.pushNamed(context, '/cartpage'),
+                  icon: Icon(
+                      Icons.shopping_cart,
+                      color: Colors.white
+                  ),
                 ),
               )
             ],
