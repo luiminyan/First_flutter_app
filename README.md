@@ -11,10 +11,10 @@ Menu page <br>
 <image src="https://github.com/luiminyan/First_flutter_app/blob/main/images/menuPage_sreenshot.png" height="375" alt="menupage"> <br>
 
 Dark moode <br>
-<image src="darkmode.png" height="375" alt="darkmode_gif"><br>
+<image src="/images/darkmode.png" height="375" alt="darkmode"><br>
 
 Festival Page <br>
-<image src="/images/event_pages/mitama_festival.png" height="375"><br>
+<image src="/images/event_pages/Mitama_Festival.png" height="375"><br>
 
 Noodle Page <br>
 <image src="/images/event_pages/Noodle.png" height="375"><br>
