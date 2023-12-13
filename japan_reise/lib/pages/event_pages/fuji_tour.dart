@@ -8,7 +8,6 @@ class FujiTourPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int booking_count = 0;
     return Consumer<CartModel>(
         builder: (context, cartModel, child) => Scaffold(
           backgroundColor: Color.fromARGB(255, 222, 210, 243),

@@ -21,8 +21,95 @@ import 'package:provider/provider.dart';
                  ),
                  centerTitle: true
                ),
+               body: Padding(
+                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                 child: Column(
+                   children: [
+                     // make ListView expanded
+                     Expanded(
+                       child: ListView(
+                         children: [
+                           if (cartModel.noodlesoup > 0)
+                             Container(
+                             decoration: BoxDecoration(
+                               color: Color.fromARGB(255, 61, 91, 212),
+                               borderRadius: BorderRadius.circular(12)
+                             ),
+                             // ListTile for "Nuddelsuppe"
+                             child: ListTile(
+                               title: Text(
+                                 "Nuddelsuppe",
+                                 style: TextStyle(color: Colors.white),
+                               ),
+                               subtitle: Text(
+                                 "18 Euro",
+                                 style: TextStyle(color: Colors.white),
+                               ),
+                               trailing: Row(
+                                 mainAxisSize: MainAxisSize.min,
+                                 children: [
+                                   Text(
+                                     cartModel.noodlesoup.toString(),
+                                     style: TextStyle(color: Colors.white),
+                                   ),
+                                   SizedBox(width: 10),
+                                   // TODO: make delete button active
+                                   IconButton(
+                                       onPressed: cartModel.clearNoodleSoup,
+                                       icon: Icon(
+                                         Icons.delete,
+                                         color: Colors.white
+                                       )
+                                   )
+                                 ],
+                               ),
+                             ),
+                           ),
+                           SizedBox(height: 10),
+                           if (cartModel.festival > 0)
+                             Container(
+                             decoration: BoxDecoration(
+                                 color: Color.fromARGB(255, 61, 91, 212),
+                                 borderRadius: BorderRadius.circular(12)
+                             ),
+                             // ListTile for "Nuddelsuppe"
+                             child: ListTile(
+                               title: Text(
+                                 "Mitama Matsuri Festival",
+                                 style: TextStyle(color: Colors.white),
+                               ),
+                               subtitle: Text(
+                                 "18 Euro",
+                                 style: TextStyle(color: Colors.white),
+                               ),
+                               trailing: Row(
+                                 mainAxisSize: MainAxisSize.min,
+                                 children: [
+                                   Text(
+                                     cartModel.festival.toString(),
+                                     style: TextStyle(color: Colors.white),
+                                   ),
+                                   SizedBox(width: 10),
+                                   // TODO: make delete button active
+                                   IconButton(
+                                       onPressed: cartModel.clearFesitvalSoup,
+                                       icon: Icon(
+                                           Icons.delete,
+                                           color: Colors.white
+                                       )
+                                   )
+                                 ],
+                               ),
+                             ),
+                           ),
+                           
+                         ],
+                       ),
+                     )
+                   ],
+                 ),
+               ),
              )
      );
-     ;
    }
  }

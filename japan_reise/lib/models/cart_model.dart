@@ -29,6 +29,12 @@ class CartModel extends ChangeNotifier{
     notifyListeners();
   }
 
+  // remove from shopping cart
+  void clearNoodleSoup() {
+    noodlesoup = 0;
+    notifyListeners();
+  }
+
   void addFestival() {
     festival++;
     // inform all listeners
@@ -40,6 +46,12 @@ class CartModel extends ChangeNotifier{
       festival--;
     }
     // inform all listeners
+    notifyListeners();
+  }
+
+  // remove from shopping cart
+  void clearFesitvalSoup() {
+    festival = 0;
     notifyListeners();
   }
 
@@ -68,5 +80,8 @@ class CartModel extends ChangeNotifier{
     }
     notifyListeners();
   }
+
+  // get
+  int get totalItems => noodlesoup + festival;
 
 }
