@@ -115,7 +115,7 @@ class KimonoPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
-                                "19 Euro",
+                                "${cartModel.priceMap["Kimono"]} Euro",
                                 style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.white,

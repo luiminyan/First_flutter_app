@@ -115,7 +115,7 @@ class NoodlePage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                            "19 Euro",
+                            "${cartModel.priceMap["Noodle"]} Euro",
                             style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.white,

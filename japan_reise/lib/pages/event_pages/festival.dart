@@ -117,7 +117,7 @@ class FestivalPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                            "49 Euro",
+                            "${cartModel.priceMap["Festival"]} Euro",
                             style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.white,

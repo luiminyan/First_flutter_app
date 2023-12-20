@@ -12,7 +12,7 @@ class CartModel extends ChangeNotifier{
     "Festival": 49.0,
     "Noodle": 19.0,
     "Fuji": 39.0,
-    "Kimono": 19.0
+    "Kimono": 10.0
   };
 
   void addNoodleSuppe() {
@@ -50,7 +50,7 @@ class CartModel extends ChangeNotifier{
   }
 
   // remove from shopping cart
-  void clearFesitvalSoup() {
+  void clearFesitval() {
     festival = 0;
     notifyListeners();
   }
@@ -61,11 +61,21 @@ class CartModel extends ChangeNotifier{
     notifyListeners();
   }
 
+  void clearTour() {
+    tour = 0;
+    notifyListeners();
+  }
+
   void removeTour() {
     if (tour > 0) {
       tour--;
     }
     // inform all listeners
+    notifyListeners();
+  }
+
+  void clearKimono(){
+    kimono = 0;
     notifyListeners();
   }
 
@@ -82,6 +92,6 @@ class CartModel extends ChangeNotifier{
   }
 
   // get
-  int get totalItems => noodlesoup + festival;
+  int get totalItems => noodlesoup + festival + tour + kimono;
 
 }

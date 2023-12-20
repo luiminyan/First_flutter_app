@@ -25,6 +25,7 @@ import 'package:provider/provider.dart';
                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
                  child: Column(
                    children: [
+                     // TODO: make the
                      // make ListView expanded
                      Expanded(
                        child: ListView(
@@ -42,7 +43,7 @@ import 'package:provider/provider.dart';
                                  style: TextStyle(color: Colors.white),
                                ),
                                subtitle: Text(
-                                 "18 Euro",
+                                 "${cartModel.priceMap["Noodle"]} Euro",
                                  style: TextStyle(color: Colors.white),
                                ),
                                trailing: Row(
@@ -53,7 +54,6 @@ import 'package:provider/provider.dart';
                                      style: TextStyle(color: Colors.white),
                                    ),
                                    SizedBox(width: 10),
-                                   // TODO: make delete button active
                                    IconButton(
                                        onPressed: cartModel.clearNoodleSoup,
                                        icon: Icon(
@@ -79,7 +79,7 @@ import 'package:provider/provider.dart';
                                  style: TextStyle(color: Colors.white),
                                ),
                                subtitle: Text(
-                                 "18 Euro",
+                                 "${cartModel.priceMap["Festival"]! * cartModel.festival} Euro",
                                  style: TextStyle(color: Colors.white),
                                ),
                                trailing: Row(
@@ -90,9 +90,8 @@ import 'package:provider/provider.dart';
                                      style: TextStyle(color: Colors.white),
                                    ),
                                    SizedBox(width: 10),
-                                   // TODO: make delete button active
                                    IconButton(
-                                       onPressed: cartModel.clearFesitvalSoup,
+                                       onPressed: cartModel.clearFesitval,
                                        icon: Icon(
                                            Icons.delete,
                                            color: Colors.white
@@ -102,6 +101,76 @@ import 'package:provider/provider.dart';
                                ),
                              ),
                            ),
+                           SizedBox(height: 10),
+                           if (cartModel.tour > 0)
+                             Container(
+                               decoration: BoxDecoration(
+                                   color: Color.fromARGB(255, 61, 91, 212),
+                                   borderRadius: BorderRadius.circular(12)
+                               ),
+                               child: ListTile(
+                                 title: Text(
+                                   "Fuji Tour",
+                                   style: TextStyle(color: Colors.white),
+                                 ),
+                                 subtitle: Text(
+                                   "${cartModel.priceMap["Fuji"]! * cartModel.tour} Euro",
+                                   style: TextStyle(color: Colors.white),
+                                 ),
+                                 trailing: Row(
+                                   mainAxisSize: MainAxisSize.min,
+                                   children: [
+                                     Text(
+                                       cartModel.tour.toString(),
+                                       style: TextStyle(color: Colors.white),
+                                     ),
+                                     SizedBox(width: 10),
+                                     IconButton(
+                                         onPressed: cartModel.clearTour,
+                                         icon: Icon(
+                                             Icons.delete,
+                                             color: Colors.white
+                                         )
+                                     )
+                                   ],
+                                 ),
+                               ),
+                             ),
+                           SizedBox(height: 10),
+                           if (cartModel.kimono > 0)
+                             Container(
+                               decoration: BoxDecoration(
+                                   color: Color.fromARGB(255, 61, 91, 212),
+                                   borderRadius: BorderRadius.circular(12)
+                               ),
+                               child: ListTile(
+                                 title: Text(
+                                   "Komono Kultur",
+                                   style: TextStyle(color: Colors.white),
+                                 ),
+                                 subtitle: Text(
+                                   "${cartModel.priceMap["Kimono"]! * cartModel.kimono} Euro",
+                                   style: TextStyle(color: Colors.white),
+                                 ),
+                                 trailing: Row(
+                                   mainAxisSize: MainAxisSize.min,
+                                   children: [
+                                     Text(
+                                       cartModel.kimono.toString(),
+                                       style: TextStyle(color: Colors.white),
+                                     ),
+                                     SizedBox(width: 10),
+                                     IconButton(
+                                         onPressed: cartModel.clearKimono,
+                                         icon: Icon(
+                                             Icons.delete,
+                                             color: Colors.white
+                                         )
+                                     )
+                                   ],
+                                 ),
+                               ),
+                             ),
                            
                          ],
                        ),

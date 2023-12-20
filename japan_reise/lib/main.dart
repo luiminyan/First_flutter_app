@@ -11,14 +11,10 @@ import 'package:japan_reise/pages/event_pages/festival.dart';
 // import provider,
 import 'package:provider/provider.dart';
 
-
 void main() {
   // run the app(the app to run)
   runApp(ChangeNotifierProvider(
-      create: (context) => CartModel(),
-      child: const MyApp()
-    )
-  );
+      create: (context) => CartModel(), child: const MyApp()));
 }
 
 // define MyApp(), extend StatelessWidget class
@@ -37,10 +33,10 @@ class MyApp extends StatelessWidget {
       home: StartPage(),
       // Navigation
       routes: {
-        '/startpage':(context) => StartPage(),
-        '/menupage':(context) => MenuPage(),
-        '/festivalpage':(context) => FestivalPage(),
-        '/fujitourpage':(context) => FujiTourPage(),
+        '/startpage': (context) => StartPage(),
+        '/menupage': (context) => MenuPage(),
+        '/festivalpage': (context) => FestivalPage(),
+        '/fujitourpage': (context) => FujiTourPage(),
         '/noodlepage': (context) => NoodlePage(),
         '/kimonopage': (context) => KimonoPage(),
         '/cartpage': (context) => CartPage()
